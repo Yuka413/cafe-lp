@@ -1,7 +1,150 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td {
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+	display: block;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	vertical-align: top;
+}
+
+q {
+	quotes: '"' '"';
+}
+
 body {
 	font-family: "Noto Sans JP", serif;
 	font-size: 16px;
 	font-weight: 400;
 }
 
+.l-header {
+	background-color: #2f2f2f;
+	padding-bottom: 21px;
+	padding-top: 22px;
+	position: fixed;
+	width: 100%;
+}
+
+.l-header__inner {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.l-header__logo img {
+	flex-shrink: 0;
+	height: 29.397px;
+	width: 55px;
+}
+
+.l-header__nav {
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	font-family: "Satisfy", serif;
+	font-size: 14px;
+	gap: 20px;
+}
+
+.u-inner {
+	padding-inline: 16px;
+}
+
+@media screen and (min-width: 750px) {
+
+.l-header__inner {
+	padding-left: 33px;
+	padding-right: 71px;
+}
+
+.l-header__logo img {
+	flex-shrink: 0;
+	height: 63px;
+	width: 117.871px;
+}
+
+.l-header__nav {
+	font-size: 18px;
+	gap: 40px;
+}
+
+}
 

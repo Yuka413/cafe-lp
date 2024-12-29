@@ -1,0 +1,50 @@
+@use "../global/" as global;
+
+.l-header {
+  position: fixed;
+  width: 100%;
+  padding-top: 22px;
+  padding-bottom: 21px;
+  background-color: global.$base-color;
+}
+
+.l-header__inner {
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @include global.mq("md") {
+    padding-left: 33px;
+    padding-right: 71px;
+  }
+}
+
+.l-header__logo {
+  img {
+    width: 55px;
+    height: 29.397px;
+    flex-shrink: 0;
+
+    @include global.mq("md") {
+      width: 117.871px;
+      height: 63px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.l-header__nav {
+  font-family: global.$ff-deco;
+  font-size: 14px;
+  color: global.$text-color-l;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  @include global.mq("md") {
+    font-size: 18px;
+    gap: 40px;
+  }
+}
