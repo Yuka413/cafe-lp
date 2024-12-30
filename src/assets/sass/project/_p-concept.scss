@@ -1,0 +1,90 @@
+@use "../global/" as global;
+
+.p-concept {
+  padding-top: 48px;
+  padding-bottom: 64px;
+  background-color: global.$base-color;
+  position: relative;
+
+  @include global.mq("md") {
+    padding-top: 120px;
+    padding-bottom: 110px;
+  }
+}
+
+.p-concept__inner {
+  text-align: center;
+
+  padding-right: 32px;
+  padding-left: 33px;
+}
+
+.p-concept__description {
+  color: global.$text-color-l;
+}
+
+.p-concept__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding-left: 15px;
+
+  @include global.mq("md") {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    padding-left: 0;
+  }
+}
+
+.p-concept__text__container {
+  z-index: 10;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include global.mq("md"){
+    padding-top: 50px;
+    gap: 26px;
+  }
+}
+
+.p-concept__text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.48px;
+
+  @include global.mq("md") {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+  }
+}
+
+.p-concept__bg {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  right: 0;
+  @include global.mq("md") {
+    flex-direction: row;
+    gap: 120px;
+    top: 27px;
+  }
+}
+.p-concept__bg-text {
+  color: rgba(103, 103, 103, 0.3);
+  text-align: right;
+  font-family: global.$ff-deco;
+  font-size: 110px;
+  font-weight: 400;
+  line-height: 88px;
+  letter-spacing: 3.3px;
+
+  @include global.mq("md") {
+    font-size: 280px;
+    line-height: 2.8;
+  }
+}
