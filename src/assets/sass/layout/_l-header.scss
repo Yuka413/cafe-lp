@@ -3,8 +3,8 @@
 .l-header {
   position: fixed;
   width: 100%;
-  padding-top: 22px;
-  padding-bottom: 21px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: global.$base-color;
 }
 
@@ -36,15 +36,16 @@
 }
 
 .l-header__nav {
+  letter-spacing: 0.42px;
   font-family: global.$ff-deco;
   font-size: 14px;
   color: global.$text-color-l;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
 
   @include global.mq("md") {
     font-size: 18px;
-    gap: 40px;
+    gap: 56px;
   }
 }

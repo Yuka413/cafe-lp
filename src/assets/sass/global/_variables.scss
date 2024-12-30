@@ -13,9 +13,10 @@ $fw-base: 400;
 
 // ブレイクポイント
 $breakpoints: (
+  ss: "screen and (max-width: 365px)",
   sm: "screen and (min-width: 600px)",
   md: "screen and (min-width: 750px)",
   lg: "screen and (min-width: 950px)",
-  xl: "screen and (min-width: 1230px)",
-  ll: "screen and (min-width: 1320px)",
+  xl: "screen and (min-width: 1000px)",
+  ll: "screen and (min-width: 1300px)",
 );
