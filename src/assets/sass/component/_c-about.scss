@@ -1,0 +1,53 @@
+@use "../global/" as global;
+
+.c-about {
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+
+  @include global.mq("md"){
+    flex-direction: row-reverse;
+  }
+}
+
+.c-about__text {
+  position: relative;
+  padding-left: 9px;
+}
+
+.c-about__title {
+  color: global.$text-color-d;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  @include global.mq("md"){
+    
+  }
+}
+
+.c-about__title--color {
+  color: global.$accent-color;
+}
+
+.c-about__description {
+  padding-top: 16px;
+  padding-bottom: 32px;
+  color: global.$text-color-d;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.48px;
+}
+
+.c-about__number {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: global.$ff-deco;
+  font-size: 180px;
+  font-weight: 400;
+}
+
+.c-about__image {
+}

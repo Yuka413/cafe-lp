@@ -1,6 +1,8 @@
 @use "../global/" as global;
 
 .p-concept {
+  overflow: hidden;
+
   padding-top: 48px;
   padding-bottom: 64px;
   background-color: global.$base-color;
@@ -44,9 +46,9 @@
   flex-direction: column;
   gap: 24px;
 
-  @include global.mq("md"){
-    padding-top: 50px;
-    gap: 26px;
+  @include global.mq("md") {
+    gap: 27px;
+    padding-top: 48px;
   }
 }
 
@@ -62,12 +64,13 @@
 }
 
 .p-concept__bg {
-  z-index: 5;
-  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  bottom: 0;
-  right: 0;
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  transform: translateX(-50%);
   @include global.mq("md") {
     flex-direction: row;
     gap: 120px;
