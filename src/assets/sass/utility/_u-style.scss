@@ -12,3 +12,13 @@
     display: block;
   }
 }
+
+.u-padding__right{
+  @include global.mq("md"){
+  padding-right: 0px !important;
+  }
+
+  @include global.mq("xl"){
+    padding-right: 120px !important;
+  }
+}

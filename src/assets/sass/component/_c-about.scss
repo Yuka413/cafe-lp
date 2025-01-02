@@ -1,53 +1,129 @@
 @use "../global/" as global;
 
 .c-about {
-  background: #f2f2f2;
   display: flex;
   flex-direction: column;
 
-  @include global.mq("md"){
+  @include global.mq("md") {
     flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 46px;
+  }
+  @include global.mq("xl") {
+    gap: 70px;
+  }
+}
+
+.c-about__reverse {
+  @include global.mq("md") {
+    flex-direction: row;
   }
 }
 
 .c-about__text {
   position: relative;
   padding-left: 9px;
+  z-index: 1;
+  padding-right: 6px;
+
+  @include global.mq("md") {
+    padding-left: 0;
+    padding-right: 89px;
+    padding-top: 17px;
+  }
+  @include global.mq("xl") {
+    padding-right: 163px;
+  }
+}
+
+.c-about__text--reverse {
+  @include global.mq("md") {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include global.mq("xl") {
+    padding-left: 0;
+    padding-right: 124px;
+  }
 }
 
 .c-about__title {
+  white-space: nowrap;
   color: global.$text-color-d;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1.2px;
 
-  @include global.mq("md"){
-    
+  @media screen and (max-width: 374px) {
+    font-size: 18px;
+  }
+  @include global.mq("md") {
+    font-size: 30px;
+    letter-spacing: 1.5px;
   }
 }
 
 .c-about__title--color {
   color: global.$accent-color;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  @include global.mq("md") {
+  }
 }
 
 .c-about__description {
+  text-align: justify;
   padding-top: 16px;
   padding-bottom: 32px;
   color: global.$text-color-d;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.48px;
+  min-height: 136px;
+
+  @media screen and (max-width: 374px) {
+    font-size: 13px;
+  }
+
+  @include global.mq("md") {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    max-width: 400px;
+    padding-bottom: 0;
+    padding-top: 23px;
+  }
 }
 
 .c-about__number {
   position: absolute;
-  top: -20px;
+  bottom: -45px;
   right: 0;
   color: rgba(255, 255, 255, 0.8);
   font-family: global.$ff-deco;
   font-size: 180px;
   font-weight: 400;
+  height: fit-content;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+
+  @include global.mq("md") {
+    font-size: 288px;
+    bottom: -70px;
+    right: 21px;
+    letter-spacing: 10.3px;
+  }
 }
 
 .c-about__image {
+  img {
+    @include global.mq("md") {
+      width: 100%;
+      max-width: 450px;
+    }
+  }
 }

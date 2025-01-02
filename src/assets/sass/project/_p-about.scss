@@ -1,0 +1,30 @@
+@use "../global/" as global;
+
+.p-about {
+  background-color: global.$main-color;
+}
+
+.p-about__inner {
+  padding-block: 64px;
+  padding-inline: 16px;
+
+  @include global.mq("md"){
+    padding-top: 130px;
+    padding-bottom: 150px;
+  }
+}
+
+.p-about__content {
+  max-width: calc(1440px - 160px - 180px);
+  margin: 0 auto;
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+
+  @include global.mq("md"){
+    gap: 64px;
+    padding-top: 80px;
+
+  }
+}

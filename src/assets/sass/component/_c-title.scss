@@ -1,0 +1,43 @@
+@use "../global/" as global;
+
+.c-title {
+  text-align: center;
+}
+
+.c-title__sub {
+  color: global.$accent-color;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+
+  @include global.mq("md") {
+    font-size: 18px;
+    letter-spacing: 0.9px;
+  }
+}
+
+.c-title__main {
+  padding-block: 8px;
+  color: global.$text-color-d;
+  font-family: global.$ff-deco;
+  font-size: 32px;
+  letter-spacing: 1.6px;
+  position: relative;
+
+  @include global.mq("md") {
+    font-size: 48px;
+    letter-spacing: 2.4px;
+    padding-block: 10px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: global.$accent-color;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
