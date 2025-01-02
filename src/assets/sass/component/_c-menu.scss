@@ -1,0 +1,126 @@
+@use "../global/" as global;
+
+.c-menu {
+  padding-top: 275px;
+  position: relative;
+}
+
+.c-menu__inner {
+}
+
+.c-menu__image {
+  img {
+    max-width: 315px;
+  }
+  position: absolute;
+  top: 0;
+  z-index: 30;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.c-menu__detail {
+  padding: 10px;
+  background-color: global.$main-color;
+
+  @include global.mq("md") {
+    max-width: 592px;
+  }
+}
+.c-menu__detail-inner {
+  border: 1px solid global.$text-color-d;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 32px;
+}
+
+.c-menu__recommend {
+  text-align: center;
+  padding-top: 28px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 211px;
+    height: 97px;
+    flex-shrink: 0;
+    border: 2px solid global.$accent-color;
+    background: global.$accent-color;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+  }
+}
+
+.c-menu__recommend-en {
+  z-index: 10;
+  color: #fff;
+  font-family: global.$ff-deco;
+  font-size: 12px;
+  letter-spacing: 0.36px;
+  position: relative;
+}
+
+.c-menu__recommend-ja {
+  z-index: 10;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.54px;
+  position: relative;
+}
+
+.c-menu__detail-name {
+  text-align: center;
+  padding-top: 24px;
+  color: global.$text-color-d;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 2.4px;
+}
+
+.c-menu__detail-price {
+    text-align: center;
+  color: global.$text-color-d;
+}
+
+.c-menu__detail-yen {
+  font-family: global.$ff-deco;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+}
+
+.c-menu__detail-amount {
+  font-family: global.$ff-deco;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.c-menu__detail-tax {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+.c-menu__detail-nutrition {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  color: global.$text-color-d;
+  font-size: 14px;
+  letter-spacing: 0.42px;
+}
+
+.c-menu__nutrition {
+}
+
+.c-menu__nutrition-calorie {
+}
+
+.c-menu__nutrition-pfc {
+}

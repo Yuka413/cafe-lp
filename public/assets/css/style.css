@@ -126,6 +126,10 @@ body {
 	letter-spacing: 0.42px;
 }
 
+.l-header__nav-list a {
+	padding-block: 20px;
+}
+
 .c-about {
 	display: flex;
 	flex-direction: column;
@@ -182,6 +186,7 @@ body {
 }
 
 .c-title {
+	position: relative;
 	text-align: center;
 }
 
@@ -198,18 +203,127 @@ body {
 	font-size: 32px;
 	letter-spacing: 1.6px;
 	padding-block: 8px;
-	position: relative;
 }
 
-.c-title__main::after {
+.c-title__border {
 	background-color: #159741;
 	bottom: 0;
-	content: "";
 	height: 2px;
 	left: 50%;
 	position: absolute;
 	transform: translateX(-50%);
 	width: 50px;
+}
+
+.c-menu {
+	padding-top: 275px;
+	position: relative;
+}
+
+.c-menu__image {
+	left: 50%;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	z-index: 30;
+}
+
+.c-menu__image img {
+	max-width: 315px;
+}
+
+.c-menu__detail {
+	background-color: #f2f2f2;
+	padding: 10px;
+}
+
+.c-menu__detail-inner {
+	border: 1px solid #333;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding-bottom: 32px;
+}
+
+.c-menu__recommend {
+	padding-top: 28px;
+	position: relative;
+	text-align: center;
+}
+
+.c-menu__recommend::before {
+	background: #159741;
+	border: 2px solid #159741;
+	content: "";
+	flex-shrink: 0;
+	height: 97px;
+	left: 50%;
+	position: absolute;
+	top: -11px;
+	transform: translateX(-50%);
+	width: 211px;
+	z-index: 5;
+}
+
+.c-menu__recommend-en {
+	color: #fff;
+	font-family: "Satisfy", serif;
+	font-size: 12px;
+	letter-spacing: 0.36px;
+	position: relative;
+	z-index: 10;
+}
+
+.c-menu__recommend-ja {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.54px;
+	position: relative;
+	z-index: 10;
+}
+
+.c-menu__detail-name {
+	color: #333;
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 2.4px;
+	line-height: 1.5;
+	padding-top: 24px;
+	text-align: center;
+}
+
+.c-menu__detail-price {
+	color: #333;
+	text-align: center;
+}
+
+.c-menu__detail-yen {
+	font-family: "Satisfy", serif;
+	font-size: 18px;
+	letter-spacing: 1.8px;
+}
+
+.c-menu__detail-amount {
+	font-family: "Satisfy", serif;
+	font-size: 30px;
+	letter-spacing: 3px;
+}
+
+.c-menu__detail-tax {
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 1.2px;
+}
+
+.c-menu__detail-nutrition {
+	color: #333;
+	display: flex;
+	flex-direction: row;
+	font-size: 14px;
+	gap: 10px;
+	justify-content: center;
+	letter-spacing: 0.42px;
 }
 
 .p-mv {
@@ -353,12 +467,132 @@ body {
 	padding-top: 56px;
 }
 
+.p-menu {
+	background-color: #2f2f2f;
+	padding-block: 24px;
+	padding-inline: 16px;
+}
+
+.p-menu__inner {
+	border: 1px solid #fff;
+	padding-block: 32px;
+	padding-left: 22px;
+	padding-right: 21px;
+}
+
+.p-menu__nutrition {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	justify-content: center;
+	padding-block: 48px;
+}
+
+.p-menu__nutrition-pfc {
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 0.48px;
+}
+
+.p-menu__container {
+	display: grid;
+	gap: 48px;
+	grid-template-columns: 1fr;
+}
+
+.p-menu__insta {
+	margin-top: 48px;
+}
+
+.p-menu__insta-inner {
+	padding-inline: 10px;
+}
+
+.p-menu__insta-top {
+	position: relative;
+}
+
+.p-menu__insta-top::after {
+	background-color: #159741;
+	content: "";
+	flex-shrink: 0;
+	height: 50px;
+	left: 50%;
+	position: absolute;
+	top: -11px;
+	transform: translateX(-50%);
+	width: 185px;
+	z-index: 5;
+}
+
+.p-menu__insta-text {
+	color: #fff;
+	font-family: "Satisfy", serif;
+	font-size: 24px;
+	letter-spacing: 1.2px;
+	position: relative;
+	text-align: center;
+	z-index: 10;
+}
+
+.p-menu__insta-description {
+	color: #333;
+	letter-spacing: 0.8px;
+	padding-block: 24px;
+	text-align: justify;
+}
+
+.p-menu__insta-image {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.p-menu__insta-ID {
+	color: #333;
+	line-height: normal;
+	text-align: center;
+}
+
+.p-menu__insta-link {
+	border: 1px solid #333;
+	padding-bottom: 17px;
+	padding-top: 16px;
+	text-align: center;
+}
+
+.p-menu__insta-link-text {
+	color: #333;
+	font-weight: 700;
+	letter-spacing: 0.48px;
+	padding-right: 22px;
+	position: relative;
+}
+
+.p-menu__insta-link-text::after {
+	content: "\f08e";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 600;
+	position: absolute;
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 .u-inner {
 	padding-inline: 16px;
 }
 
 .u-sp-hidden {
 	display: none;
+}
+
+.u-color__white {
+	color: #fff;
+}
+
+.u-color__bg-white {
+	background-color: #fff;
 }
 
 @media screen and (min-width: 750px) {
@@ -441,6 +675,10 @@ body {
 	font-size: 48px;
 	letter-spacing: 2.4px;
 	padding-block: 10px;
+}
+
+.c-menu__detail {
+	max-width: 592px;
 }
 
 .p-mv {

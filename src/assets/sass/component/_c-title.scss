@@ -2,6 +2,7 @@
 
 .c-title {
   text-align: center;
+  position: relative;
 }
 
 .c-title__sub {
@@ -22,7 +23,6 @@
   font-family: global.$ff-deco;
   font-size: 32px;
   letter-spacing: 1.6px;
-  position: relative;
 
   @include global.mq("md") {
     font-size: 48px;
@@ -30,14 +30,14 @@
     padding-block: 10px;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 50px;
-    height: 2px;
-    background-color: global.$accent-color;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+}
+
+.c-title__border {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: global.$accent-color;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
