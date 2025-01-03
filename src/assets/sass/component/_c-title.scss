@@ -19,7 +19,7 @@
 
 .c-title__main {
   padding-top: 8px;
-  padding-bottom: 7px;
+  padding-bottom: 13px;
   color: global.$text-color-d;
   font-family: global.$ff-deco;
   font-size: 32px;
@@ -28,7 +28,8 @@
   @include global.mq("md") {
     font-size: 48px;
     letter-spacing: 2.4px;
-    padding-block: 10px;
+    padding-top: 9px;
+    padding-bottom: 17px;
   }
 }
 

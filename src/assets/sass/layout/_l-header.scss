@@ -49,11 +49,11 @@
   color: global.$text-color-l;
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 20px;
 
   @include global.mq("md") {
     font-size: 18px;
-    gap: 56px;
+    gap: 41px;
   }
 }
 

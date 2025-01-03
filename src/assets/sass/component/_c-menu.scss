@@ -16,7 +16,7 @@
   margin-left: 2px;
   padding-top: 256px;
   margin-right: -4px;
-  @include global.mq("md"){
+  @include global.mq("md") {
     margin-left: 0;
     margin-right: 0;
   }
@@ -29,7 +29,6 @@
   img {
     max-width: 315px;
     margin-right: 14px;
-
   }
   position: absolute;
   top: 0;
@@ -42,27 +41,26 @@
 }
 
 .c-menu__image--secondary {
-  @include global.mq("md"){
+  @include global.mq("md") {
     top: -275px;
   }
-  @include global.mq("xl"){
+  @include global.mq("xl") {
     top: -358px;
   }
   img {
     max-width: 305px;
-    margin-right: 10px;
 
-    @include global.mq("md"){
+    @include global.mq("md") {
       max-width: 330px;
     }
-    @include global.mq("xl"){
+    @include global.mq("xl") {
       max-width: 416px;
     }
   }
 }
 
 .c-menu__image--third {
-  @include global.mq("md"){
+  @include global.mq("md") {
     top: -359px;
     left: 46%;
   }
@@ -70,7 +68,7 @@
     max-width: 308px;
     margin-right: 2px;
 
-    @include global.mq("md"){
+    @include global.mq("md") {
       max-width: 425px;
     }
   }
@@ -137,7 +135,7 @@
   padding-top: 28px;
   position: relative;
 
-  @include global.mq("md"){
+  @include global.mq("md") {
     padding-top: 0;
     margin-top: -6px;
   }
@@ -171,7 +169,7 @@
   letter-spacing: 0.36px;
   position: relative;
 
-  @include global.mq("md"){
+  @include global.mq("md") {
     font-size: 14px;
   }
 }
@@ -201,7 +199,7 @@
   @include global.mq("md") {
     font-size: 25px;
     letter-spacing: 3px;
-    padding-top: 47px;
+    padding-top: 49px;
   }
   @include global.mq("lg") {
     font-size: 30px;
@@ -210,20 +208,20 @@
 
 .c-menu__detail-name--secondary {
   padding-top: 47px;
-  @include global.mq("md"){
+  @include global.mq("md") {
     padding-top: 57px;
   }
 }
 
 .c-menu__detail-name--third {
   padding-top: 45px;
-  @include global.mq("md"){
+  @include global.mq("md") {
     padding-top: 60px;
   }
 }
 
 .c-menu__detail-price {
-  padding-top: 17px;
+  padding-top: 13px;
   display: flex;
   flex-direction: row;
   gap: 3px;
@@ -231,20 +229,27 @@
   align-items: center;
   color: global.$text-color-d;
   @include global.mq("md") {
-    gap: 16px;
+    gap: 5px;
+    padding-top: 12px;
   }
 }
 
 .c-menu__detail-price--secondary {
-  padding-top: 15px;
+  padding-top: 11px;
+}
+
+.c-menu__detail-name--third{
+  padding-top: 40px;
 }
 
 .c-menu__detail-yen {
-  font-family: global.$ff-deco;
-  font-size: 24px;
+  font-family: "reross-quadratic", sans-serif;
+  font-size: 18px;
   letter-spacing: 1.8px;
+  padding-top: 8px;
+  margin-left: -4px;
   @include global.mq("lg") {
-    font-size: 32px;
+    font-size: 24px;
     letter-spacing: 2.4px;
   }
 }
@@ -252,7 +257,7 @@
 .c-menu__detail-amount {
   font-family: global.$ff-deco;
   font-size: 30px;
-  letter-spacing: 6px;
+  letter-spacing: 3px;
   @include global.mq("lg") {
     font-size: 40px;
     letter-spacing: 4px;
@@ -264,15 +269,17 @@
   font-weight: 500;
   letter-spacing: 1.2px;
   font-feature-settings: "palt";
-  margin-bottom: 6px;
+  padding-top: 7px;
+  margin-left: -5px;
   @include global.mq("lg") {
     font-size: 18px;
     letter-spacing: 1.8px;
+    margin-right: 4px;
   }
 }
 
 .c-menu__detail-nutrition {
-  padding-top: 8px;
+  padding-top: 17px;
   display: flex;
   flex-direction: row;
   gap: 11px;
@@ -285,7 +292,7 @@
   }
   @include global.mq("ll") {
     font-size: 24px;
-    padding-top: 11px;
+    padding-top: 20px;
     gap: 21px;
   }
 }

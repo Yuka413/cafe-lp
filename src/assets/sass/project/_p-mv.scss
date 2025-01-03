@@ -27,7 +27,7 @@
 
 .p-mv__description {
   position: absolute;
-  bottom: -20px;
+  bottom: -18px;
   left: -48px;
   text-align-last: left;
 
@@ -36,15 +36,14 @@
     left: -40px;
   }
   @include global.mq("ll") {
-    bottom: -65px;
-    left: -175px;
+    bottom: -51px;
+    left: -181px;
   }
 }
 
 .p-mv__text-main {
   line-height: 40px;
   font-size: 36px;
-  letter-spacing: 3px;
   font-family: global.$ff-deco;
   color: global.$text-color-l;
 

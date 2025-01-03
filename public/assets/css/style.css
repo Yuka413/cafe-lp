@@ -120,9 +120,9 @@ body {
 	color: #fff;
 	display: flex;
 	flex-direction: row;
-	font-family: "Satisfy", serif;
+	font-family: "reross-quadratic", sans-serif;
 	font-size: 14px;
-	gap: 30px;
+	gap: 20px;
 	letter-spacing: 0.42px;
 }
 
@@ -172,7 +172,7 @@ body {
 .c-about__number {
 	bottom: -45px;
 	color: rgba(255, 255, 255, 0.8);
-	font-family: "Satisfy", serif;
+	font-family: "reross-quadratic", sans-serif;
 	font-size: 180px;
 	font-weight: 400;
 	height: -moz-fit-content;
@@ -199,10 +199,10 @@ body {
 
 .c-title__main {
 	color: #333;
-	font-family: "Satisfy", serif;
+	font-family: "reross-quadratic", sans-serif;
 	font-size: 32px;
 	letter-spacing: 1.6px;
-	padding-bottom: 7px;
+	padding-bottom: 13px;
 	padding-top: 8px;
 }
 
@@ -245,7 +245,6 @@ body {
 }
 
 .c-menu__image--secondary img {
-	margin-right: 10px;
 	max-width: 305px;
 }
 
@@ -286,7 +285,7 @@ body {
 
 .c-menu__recommend-en {
 	color: #fff;
-	font-family: "Satisfy", serif;
+	font-family: "reross-quadratic", sans-serif;
 	font-size: 12px;
 	letter-spacing: 0.36px;
 	position: relative;
@@ -327,23 +326,29 @@ body {
 	flex-direction: row;
 	gap: 3px;
 	justify-content: center;
-	padding-top: 17px;
+	padding-top: 13px;
 }
 
 .c-menu__detail-price--secondary {
-	padding-top: 15px;
+	padding-top: 11px;
+}
+
+.c-menu__detail-name--third {
+	padding-top: 40px;
 }
 
 .c-menu__detail-yen {
-	font-family: "Satisfy", serif;
-	font-size: 24px;
+	font-family: "reross-quadratic", sans-serif;
+	font-size: 18px;
 	letter-spacing: 1.8px;
+	margin-left: -4px;
+	padding-top: 8px;
 }
 
 .c-menu__detail-amount {
-	font-family: "Satisfy", serif;
+	font-family: "reross-quadratic", sans-serif;
 	font-size: 30px;
-	letter-spacing: 6px;
+	letter-spacing: 3px;
 }
 
 .c-menu__detail-tax {
@@ -351,7 +356,8 @@ body {
 	font-size: 12px;
 	font-weight: 500;
 	letter-spacing: 1.2px;
-	margin-bottom: 6px;
+	margin-left: -5px;
+	padding-top: 7px;
 }
 
 .c-menu__detail-nutrition {
@@ -362,7 +368,7 @@ body {
 	gap: 11px;
 	justify-content: center;
 	letter-spacing: 0.42px;
-	padding-top: 8px;
+	padding-top: 17px;
 }
 
 .c-bg-parallax {
@@ -402,7 +408,7 @@ body {
 }
 
 .p-mv__description {
-	bottom: -20px;
+	bottom: -18px;
 	left: -48px;
 	position: absolute;
 	-moz-text-align-last: left;
@@ -411,9 +417,8 @@ body {
 
 .p-mv__text-main {
 	color: #fff;
-	font-family: "Satisfy", serif;
+	font-family: "reross-quadratic", sans-serif;
 	font-size: 36px;
-	letter-spacing: 3px;
 	line-height: 40px;
 }
 
@@ -500,7 +505,7 @@ body {
 
 .p-concept__bg-text {
 	color: rgba(103, 103, 103, 0.3);
-	font-family: "Satisfy", serif;
+	font-family: "reross-quadratic", sans-serif;
 	font-size: 110px;
 	font-weight: 400;
 	letter-spacing: 3.3px;
@@ -534,9 +539,10 @@ body {
 
 .p-menu__inner {
 	border: 1px solid #fff;
-	padding-block: 32px;
+	padding-bottom: 30px;
 	padding-left: 22px;
 	padding-right: 21px;
+	padding-top: 32px;
 }
 
 .p-menu__nutrition {
@@ -563,7 +569,7 @@ body {
 .p-menu__insta {
 	margin-left: 2px;
 	margin-right: -4px;
-	margin-top: 44px;
+	margin-top: 49px;
 }
 
 .p-menu__insta-inner {
@@ -583,7 +589,7 @@ body {
 	height: 50px;
 	left: 50%;
 	position: absolute;
-	top: -11px;
+	top: -8px;
 	transform: translateX(-50%);
 	width: 185px;
 	z-index: 5;
@@ -591,9 +597,10 @@ body {
 
 .p-menu__insta-text {
 	color: #fff;
-	font-family: "Satisfy", serif;
+	font-family: "reross-quadratic", sans-serif;
 	font-size: 24px;
 	letter-spacing: 1.2px;
+	margin-top: -3px;
 	position: relative;
 	text-align: center;
 	z-index: 10;
@@ -609,7 +616,7 @@ body {
 	letter-spacing: 0.8px;
 	padding-bottom: 24px;
 	padding-inline: 11px;
-	padding-top: 27px;
+	padding-top: 34px;
 	text-align: justify;
 }
 
@@ -617,6 +624,7 @@ body {
 	display: grid;
 	gap: 10px;
 	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
 }
 
 .p-menu__insta-ID {
@@ -652,6 +660,124 @@ body {
 	right: 17px;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+.p-shop {
+	background: #f2f2f2;
+	padding-top: 64px;
+}
+
+.p-shop__map-image {
+	padding-top: 56px;
+}
+
+.p-shop__description {
+	padding-inline: 16px;
+}
+
+.p-shop__name-container {
+	padding-top: 56px;
+	text-align: center;
+}
+
+.p-shop__name-head {
+	color: #333;
+	font-family: "reross-quadratic", sans-serif;
+	font-size: 18px;
+	line-height: 1;
+}
+
+.p-shop__name-body {
+	color: #333;
+	font-family: "reross-quadratic", sans-serif;
+	font-size: 32px;
+	letter-spacing: 0.96px;
+	line-height: 1;
+	padding-left: 4px;
+}
+
+.p-shop__name-jp {
+	color: #333;
+	letter-spacing: 0.48px;
+}
+
+.p-shop__address {
+	color: #333;
+	letter-spacing: 0.48px;
+	line-height: 1.7;
+	padding-inline: 12px;
+}
+
+.p-shop__info {
+	color: #333;
+	letter-spacing: 0.48px;
+	line-height: 1.7;
+	padding-inline: 12px;
+	padding-top: 5px;
+}
+
+.p-shop__info th {
+	text-align: left;
+	white-space: nowrap;
+}
+
+.p-shop__info td {
+	padding-left: 10px;
+}
+
+.p-shop__description-image {
+	padding-top: 40px;
+}
+
+.p-shop__card {
+	background: #fff;
+	box-shadow: 0px 4px 20px 0px rgba(161, 159, 159, 0.6);
+	margin-inline: 16px;
+	margin-top: 98px;
+	padding: 10px;
+}
+
+.p-shop__card-inner {
+	position: relative;
+}
+
+.p-shop__card-stamp img {
+	flex-shrink: 0;
+	height: 93px;
+	left: -25px;
+	position: absolute;
+	top: -39px;
+	width: 112px;
+}
+
+.p-shop__card-description {
+	position: relative;
+}
+
+.p-shop__card-dear {
+	color: #333;
+	font-family: "Satisfy", serif;
+	font-size: 30px;
+	left: 0;
+	letter-spacing: 1.5px;
+	position: absolute;
+	top: 20px;
+}
+
+.p-shop__card-description-text {
+	color: #4f4f4f;
+	line-height: 2.5;
+	padding-top: 63px;
+	-webkit-text-decoration: underline #c4c4c4;
+	text-decoration: underline #c4c4c4;
+	text-underline-offset: 13px;
+}
+
+.p-shop__card-have-nice {
+	color: #159741;
+	font-family: "Satisfy", serif;
+	font-size: 36px;
+	letter-spacing: 1.8px;
 }
 
 .u-inner {
@@ -710,7 +836,7 @@ body {
 
 .l-header__nav {
 	font-size: 18px;
-	gap: 56px;
+	gap: 41px;
 }
 
 .c-about {
@@ -768,7 +894,8 @@ body {
 .c-title__main {
 	font-size: 48px;
 	letter-spacing: 2.4px;
-	padding-block: 10px;
+	padding-bottom: 17px;
+	padding-top: 9px;
 }
 
 .c-menu {
@@ -844,7 +971,7 @@ body {
 .c-menu__detail-name {
 	font-size: 25px;
 	letter-spacing: 3px;
-	padding-top: 47px;
+	padding-top: 49px;
 }
 
 .c-menu__detail-name--secondary {
@@ -856,7 +983,8 @@ body {
 }
 
 .c-menu__detail-price {
-	gap: 16px;
+	gap: 5px;
+	padding-top: 12px;
 }
 
 .c-bg-parallax {
@@ -970,7 +1098,7 @@ body {
 
 .p-menu__insta {
 	margin: 0 auto;
-	margin-top: 79px;
+	margin-top: 77px;
 	max-width: 1080px;
 }
 
@@ -983,7 +1111,7 @@ body {
 	flex-shrink: 0;
 	height: 73px;
 	left: 49%;
-	top: -15px;
+	top: -13px;
 	width: 360px;
 }
 
@@ -1027,7 +1155,7 @@ body {
 	font-size: 18px;
 	justify-content: center;
 	padding-bottom: 35px;
-	padding-top: 43px;
+	padding-top: 50px;
 }
 
 .p-menu__insta-image {
@@ -1045,7 +1173,7 @@ body {
 
 .p-menu__insta-ID {
 	font-size: 18px;
-	padding-bottom: 26px;
+	padding-bottom: 25px;
 }
 
 .p-menu__insta-link-text::after {
@@ -1089,7 +1217,7 @@ body {
 }
 
 .c-menu__detail-yen {
-	font-size: 32px;
+	font-size: 24px;
 	letter-spacing: 2.4px;
 }
 
@@ -1101,6 +1229,7 @@ body {
 .c-menu__detail-tax {
 	font-size: 18px;
 	letter-spacing: 1.8px;
+	margin-right: 4px;
 }
 
 .c-menu__detail-nutrition {
@@ -1194,7 +1323,7 @@ body {
 .c-menu__detail-nutrition {
 	font-size: 24px;
 	gap: 21px;
-	padding-top: 11px;
+	padding-top: 20px;
 }
 
 .c-bg-parallax img {
@@ -1208,8 +1337,8 @@ body {
 }
 
 .p-mv__description {
-	bottom: -65px;
-	left: -175px;
+	bottom: -51px;
+	left: -181px;
 }
 
 .p-mv__text-main {
