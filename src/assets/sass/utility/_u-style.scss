@@ -13,13 +13,14 @@
   }
 }
 
-.u-padding__right{
+.u-padding__menu{
   @include global.mq("md"){
   padding-right: 0px !important;
   }
 
   @include global.mq("xl"){
     padding-right: 120px !important;
+    padding-top: 31px;
   }
 }
 

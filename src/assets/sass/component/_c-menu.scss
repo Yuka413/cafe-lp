@@ -1,8 +1,25 @@
 @use "../global/" as global;
 
 .c-menu {
-  padding-top: 275px;
+  padding-top: 271px;
   position: relative;
+  @include global.mq("md") {
+    padding-top: 0;
+  }
+}
+
+.c-menu__secondary {
+  padding-top: 260px;
+}
+
+.c-menu__third {
+  margin-left: 2px;
+  padding-top: 256px;
+  margin-right: -4px;
+  @include global.mq("md"){
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .c-menu__inner {
@@ -11,12 +28,81 @@
 .c-menu__image {
   img {
     max-width: 315px;
+    margin-right: 14px;
+
   }
   position: absolute;
   top: 0;
   z-index: 30;
   left: 50%;
   transform: translateX(-50%);
+  @include global.mq("md") {
+    top: -287px;
+  }
+}
+
+.c-menu__image--secondary {
+  @include global.mq("md"){
+    top: -275px;
+  }
+  @include global.mq("xl"){
+    top: -358px;
+  }
+  img {
+    max-width: 305px;
+    margin-right: 10px;
+
+    @include global.mq("md"){
+      max-width: 330px;
+    }
+    @include global.mq("xl"){
+      max-width: 416px;
+    }
+  }
+}
+
+.c-menu__image--third {
+  @include global.mq("md"){
+    top: -359px;
+    left: 46%;
+  }
+  img {
+    max-width: 308px;
+    margin-right: 2px;
+
+    @include global.mq("md"){
+      max-width: 425px;
+    }
+  }
+}
+
+.c-menu__image--first {
+  @include global.mq("md") {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -320px;
+  }
+  @include global.mq("lg") {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -308px;
+  }
+  @include global.mq("xl") {
+    top: 47%;
+    left: -405px;
+  }
+  @include global.mq("ll") {
+    top: 47%;
+    left: -362px;
+  }
+  img {
+    @include global.mq("md") {
+      max-width: 360px;
+    }
+    @include global.mq("xl") {
+      max-width: 452px;
+    }
+  }
 }
 
 .c-menu__detail {
@@ -24,21 +110,37 @@
   background-color: global.$main-color;
 
   @include global.mq("md") {
-    max-width: 592px;
+    padding: 14px;
+    max-width: 594px;
   }
 }
 .c-menu__detail-inner {
   border: 1px solid global.$text-color-d;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   padding-bottom: 32px;
+  @include global.mq("md") {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  @include global.mq("lg") {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @include global.mq("ll") {
+    padding-right: 27px;
+    padding-left: 28px;
+    padding-bottom: 29px;
+  }
 }
 
 .c-menu__recommend {
   text-align: center;
   padding-top: 28px;
   position: relative;
+
+  @include global.mq("md"){
+    padding-top: 0;
+    margin-top: -6px;
+  }
 
   &::before {
     content: "";
@@ -52,6 +154,12 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
+
+    @include global.mq("md") {
+      width: 251px;
+      height: 78px;
+      flex-shrink: 0;
+    }
   }
 }
 
@@ -62,6 +170,10 @@
   font-size: 12px;
   letter-spacing: 0.36px;
   position: relative;
+
+  @include global.mq("md"){
+    font-size: 14px;
+  }
 }
 
 .c-menu__recommend-ja {
@@ -71,49 +183,111 @@
   font-weight: 500;
   letter-spacing: 0.54px;
   position: relative;
+
+  @include global.mq("md") {
+    font-size: 24px;
+    letter-spacing: 0.72px;
+  }
 }
 
 .c-menu__detail-name {
   text-align: center;
-  padding-top: 24px;
+  padding-top: 39px;
   color: global.$text-color-d;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 2.4px;
+  @include global.mq("md") {
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding-top: 47px;
+  }
+  @include global.mq("lg") {
+    font-size: 30px;
+  }
+}
+
+.c-menu__detail-name--secondary {
+  padding-top: 47px;
+  @include global.mq("md"){
+    padding-top: 57px;
+  }
+}
+
+.c-menu__detail-name--third {
+  padding-top: 45px;
+  @include global.mq("md"){
+    padding-top: 60px;
+  }
 }
 
 .c-menu__detail-price {
-    text-align: center;
+  padding-top: 17px;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
   color: global.$text-color-d;
+  @include global.mq("md") {
+    gap: 16px;
+  }
+}
+
+.c-menu__detail-price--secondary {
+  padding-top: 15px;
 }
 
 .c-menu__detail-yen {
   font-family: global.$ff-deco;
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: 1.8px;
+  @include global.mq("lg") {
+    font-size: 32px;
+    letter-spacing: 2.4px;
+  }
 }
 
 .c-menu__detail-amount {
   font-family: global.$ff-deco;
   font-size: 30px;
-  letter-spacing: 3px;
+  letter-spacing: 6px;
+  @include global.mq("lg") {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
 }
 
 .c-menu__detail-tax {
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1.2px;
+  font-feature-settings: "palt";
+  margin-bottom: 6px;
+  @include global.mq("lg") {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+  }
 }
 
 .c-menu__detail-nutrition {
+  padding-top: 8px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 11px;
   justify-content: center;
   color: global.$text-color-d;
   font-size: 14px;
   letter-spacing: 0.42px;
+  @include global.mq("lg") {
+    font-size: 18px;
+  }
+  @include global.mq("ll") {
+    font-size: 24px;
+    padding-top: 11px;
+    gap: 21px;
+  }
 }
 
 .c-menu__nutrition {

@@ -4,6 +4,15 @@
   background-color: global.$base-color;
   padding-inline: 16px;
   padding-block: 24px;
+
+  @include global.mq("md") {
+    padding-inline: 30px;
+    padding-block: 30px;
+  }
+  @include global.mq("xl") {
+    padding-inline: 72px;
+    padding-block: 72px;
+  }
 }
 
 .p-menu__inner {
@@ -11,14 +20,24 @@
   padding-right: 21px;
   padding-left: 22px;
   border: 1px solid #fff;
+  @include global.mq("md") {
+    padding-top: 80px;
+    padding-bottom: 97px;
+  }
 }
 
 .p-menu__nutrition {
-  padding-block: 48px;
+  padding-block: 47px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
+  @include global.mq("md") {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    padding-block: 32px;
+    gap: 19px;
+  }
 }
 
 .p-menu__nutrition-pfc {
@@ -28,17 +47,66 @@
 }
 
 .p-menu__container {
-  display: grid;
-  grid-template-columns: 1fr;
+  @include global.mq("md") {
+    padding-left: 320px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  @include global.mq("xl") {
+    padding-left: 419px;
+    padding-top: 73px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+.p-menu__container--secondary {
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
   gap: 48px;
+
+  @include global.mq("md") {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 313px;
+  }
+  @include global.mq("xl") {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 444px;
+    gap: 33px;
+  }
 }
 
 .p-menu__insta {
-  margin-top: 48px;
+  margin-top: 44px;
+  margin-right: -4px;
+  margin-left: 2px;
+  @include global.mq("md") {
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 79px;
+  }
 }
 
 .p-menu__insta-inner {
-  padding-inline: 10px;
+  padding-inline:10px ;
+  border: 1px solid global.$text-color-d;
+  padding-bottom: 23px;
+  @include global.mq("md") {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  @include global.mq("lg") {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @include global.mq("ll") {
+    padding-right: 27px;
+    padding-left: 28px;
+    padding-bottom: 21px;
+  }
 }
 
 .p-menu__insta-top {
@@ -54,6 +122,13 @@
     transform: translateX(-50%);
     background-color: global.$accent-color;
     z-index: 5;
+    @include global.mq("md") {
+      width: 360px;
+      height: 73px;
+      flex-shrink: 0;
+      top: -15px;
+      left: 49%;
+    }
   }
 }
 
@@ -65,35 +140,101 @@
   font-family: global.$ff-deco;
   font-size: 24px;
   letter-spacing: 1.2px;
+  @include global.mq("md") {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+  }
+}
+
+.p-menu__insta-description-text {
+  position: relative;
+  @include global.mq("md") {
+    padding-inline: 41px;
+    width: fit-content;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 35px;
+      height: 1px;
+      background-color: global.$text-color-d;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transform: rotate(55deg);
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 35px;
+      height: 1px;
+      background-color: global.$text-color-d;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transform: rotate(-55deg);
+    }
+  }
 }
 
 .p-menu__insta-description {
-  padding-block: 24px;
+  padding-top: 27px;
+  padding-bottom: 24px;
   color: global.$text-color-d;
   text-align: justify;
   letter-spacing: 0.8px;
+  padding-inline: 11px;
+  font-size: 16px;
+  @include global.mq("md") {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    padding-top: 43px;
+    padding-bottom: 35px;
+  }
 }
 
 .p-menu__insta-image {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  @include global.mq("md") {
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+  }
+  img {
+    @include global.mq("md") {
+      width: 231px;
+      height: 231px;
+      flex-shrink: 0;
+    }
+  }
 }
 
 .p-menu__insta-ID {
+  padding-top: 8px;
   text-align: center;
   color: global.$text-color-d;
   line-height: normal;
+  font-size: 16px;
+  padding-right: 7px;
+  @include global.mq("md") {
+    font-size: 18px;
+    padding-bottom: 26px;
+  }
 }
 
 .p-menu__insta-link {
-  padding-top: 16px;
-  padding-bottom: 17px;
   text-align: center;
-  border: 1px solid #333;
 }
 
 .p-menu__insta-link-text {
+  margin-top: 24px;
+  border: 1px solid #333;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-right: 22px;
   color: global.$text-color-d;
   font-weight: 700;
@@ -103,9 +244,16 @@
     content: "\f08e";
     font-family: "Font Awesome 6 Free";
     font-weight: 600;
-    right: 22px;
+    right: 17px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    @include global.mq("md") {
+      right: 34px;
+    }
+  }
+  @include global.mq("md") {
+    max-width: 300px;
+    margin: 0 auto;
   }
 }

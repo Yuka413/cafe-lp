@@ -1,1 +1,43 @@
 @use "../global/" as global;
+
+.c-bg-parallax {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  @include global.mq("md") {
+    height: 450px;
+  }
+
+  img {
+    object-fit: cover;
+    transform-origin: center;
+    object-position: -9px -34px;
+    transform: scale(1.26);
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @media screen and (min-width: 500px) {
+        object-position: -9px -110px;
+    }
+    @media screen and (min-width: 645px) {
+        object-position: -9px -180px;
+        transform: scale(1.1);
+
+    }
+    @include global.mq("md") {
+      object-position: 7px -120px;
+      transform: scale(1.03, 1);
+    }
+    @include global.mq("xl") {
+      object-position: 7px -280px;
+      transform: scale(1.03, 1);
+    }
+    @include global.mq("ll") {
+      object-position: 7px -413px;
+      transform: scale(1.03, 1);
+    }
+  }
+
+
+}

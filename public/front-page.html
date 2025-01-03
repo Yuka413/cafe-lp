@@ -142,7 +142,7 @@
           </div>
         </div>
         <div class="c-about">
-          <div class="c-about__text u-padding__right">
+          <div class="c-about__text u-padding__menu">
             <h2 class="c-about__title">
               <span class="c-about__title--color">ジムトレーナー監修</span>の<br
                 class="u-pc-hidden"
@@ -162,6 +162,10 @@
   </section>
   <!-- aboutここまで -->
 
+  <div class="c-bg-parallax">
+    <img src="./assets/img/salad-parallax.png" alt="" />
+  </div>
+
   <!-- menuここから -->
   <section class="p-menu">
     <div class="p-menu__inner">
@@ -178,7 +182,7 @@
       <div class="p-menu__container">
         <div class="c-menu">
           <div class="c-menu__inner">
-            <div class="c-menu__image">
+            <div class="c-menu__image c-menu__image--first">
               <img src="./assets/img/basil-salad.png" alt="" />
             </div>
             <div class="c-menu__detail">
@@ -205,15 +209,21 @@
             </div>
           </div>
         </div>
-        <div class="c-menu">
+      </div>
+      <div class="p-menu__container--secondary">
+        <div class="c-menu c-menu__secondary">
           <div class="c-menu__inner">
-            <div class="c-menu__image">
-              <img src="./assets/img/basil-salad.png" alt="" />
+            <div class="c-menu__image c-menu__image--secondary">
+              <img src="./assets/img/avocad-salad.png" alt="" />
             </div>
             <div class="c-menu__detail">
               <div class="c-menu__detail-inner">
-                <p class="c-menu__detail-name">アボガドサラダ</p>
-                <div class="c-menu__detail-price">
+                <p class="c-menu__detail-name c-menu__detail-name--secondary">
+                  アボガドサラダ
+                </p>
+                <div
+                  class="c-menu__detail-price c-menu__detail-price--secondary"
+                >
                   <span class="c-menu__detail-yen">¥</span>
                   <span class="c-menu__detail-amount">980</span>
                   <span class="c-menu__detail-tax">（税込）</span>
@@ -228,15 +238,19 @@
             </div>
           </div>
         </div>
-        <div class="c-menu">
+        <div class="c-menu c-menu__secondary">
           <div class="c-menu__inner">
-            <div class="c-menu__image">
-              <img src="./assets/img/basil-salad.png" alt="" />
+            <div class="c-menu__image c-menu__image--secondary">
+              <img src="./assets/img/chicken-salad.png" alt="" />
             </div>
             <div class="c-menu__detail">
               <div class="c-menu__detail-inner">
-                <p class="c-menu__detail-name">チキンサラダ</p>
-                <div class="c-menu__detail-price">
+                <p class="c-menu__detail-name c-menu__detail-name--secondary">
+                  チキンサラダ
+                </p>
+                <div
+                  class="c-menu__detail-price c-menu__detail-price--secondary"
+                >
                   <span class="c-menu__detail-yen">¥</span>
                   <span class="c-menu__detail-amount">980</span>
                   <span class="c-menu__detail-tax">（税込）</span>
@@ -253,16 +267,23 @@
         </div>
       </div>
       <div class="c-menu__detail p-menu__insta">
-        <div class="c-menu__detail-inner p-menu__insta-inner">
+        <div class="p-menu__insta-inner">
           <div class="p-menu__insta-top">
             <p class="p-menu__insta-text">Instagram</p>
           </div>
-          <p class="p-menu__insta-description">Instagramにはさらに詳しいメニュー内容などを載せています！</p>
+          <div class="p-menu__insta-description">
+            <p class="p-menu__insta-description-text">
+              Instagramにはさらに詳しいメニュー内容などを載せています<span
+                class="u-pc-hidden"
+                >！</span
+              >
+            </p>
+          </div>
           <div class="p-menu__insta-image">
-            <img src="./assets/img/Instagram-1.png" alt="">
-            <img src="./assets/img/Instagram-2.png" alt="">
-            <img src="./assets/img/Instagram-3.png" alt="">
-            <img src="./assets/img/Instagram-4.png" alt="">
+            <img src="./assets/img/Instagram-1.png" alt="" />
+            <img src="./assets/img/Instagram-2.png" alt="" />
+            <img src="./assets/img/Instagram-3.png" alt="" />
+            <img src="./assets/img/Instagram-4.png" alt="" />
           </div>
           <div class="p-menu__insta-ID">ID：tf_gardensalad</div>
           <a href="" class="p-menu__insta-link">
@@ -272,7 +293,7 @@
       </div>
     </div>
   </section>
-<!-- menuここまで -->
+  <!-- menuここまで -->
   <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/script.js"></script>

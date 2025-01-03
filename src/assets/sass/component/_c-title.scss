@@ -18,7 +18,8 @@
 }
 
 .c-title__main {
-  padding-block: 8px;
+  padding-top: 8px;
+  padding-bottom: 7px;
   color: global.$text-color-d;
   font-family: global.$ff-deco;
   font-size: 32px;
@@ -29,7 +30,6 @@
     letter-spacing: 2.4px;
     padding-block: 10px;
   }
-
 }
 
 .c-title__border {
