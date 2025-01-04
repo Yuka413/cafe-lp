@@ -14,7 +14,7 @@
     />
 
     <!-- google fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/psd1sxx.css">
+    <link rel="stylesheet" href="https://use.typekit.net/psd1sxx.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -308,9 +308,10 @@
         <p class="c-title__main">Shop</p>
         <span class="c-title__border"></span>
       </h2>
-      <div class="p-shop__map-image">
-        <img src="./assets/img/Goggle map.png" alt="" />
-      </div>
+      <picture class="p-shop__map-image">
+        <source media="(min-width:750px)" srcset="./assets/img/Google-map-pc.png">
+        <img src="./assets/img/Goggle-map-sp.png" alt="" />
+      </picture>
       <div class="p-shop__description">
         <h3 class="p-shop__name-container">
           <span class="p-shop__name-head">TF</span>
@@ -348,10 +349,13 @@
       <div class="p-shop__card">
         <div class="p-shop__card-inner">
           <div class="p-shop__card-stamp">
-            <img src="./assets/img/stamp.png" alt="">
+            <img src="./assets/img/stamp.png" alt="" />
           </div>
           <picture class="p-shop__card-image">
-            <source media="(min-width:750px)" srcset="./assets/img/terrace-pc.png">
+            <source
+              media="(min-width:750px)"
+              srcset="./assets/img/terrace-pc.png"
+            />
             <img
               class="p-shop__card-image--first"
               src="./assets/img/terrace-sp.png"
@@ -359,7 +363,10 @@
             />
           </picture>
           <picture>
-            <source media="(min-width:750px)" srcset="./assets/img/takeout-pc.png">
+            <source
+              media="(min-width:750px)"
+              srcset="./assets/img/takeout-pc.png"
+            />
             <img
               class="p-shop__card-image--second"
               src="./assets/img/takeout-sp.png"
@@ -368,9 +375,13 @@
           </picture>
           <div class="p-shop__card-description">
             <p class="p-shop__card-dear">Dear You.</p>
-            <p class="p-shop__card-description-text">当店から徒歩5分ほどの場所に、オープンテラスの場所があります。お天気がいい日は、木漏れ日の中で風を感じながら食べるのもおすすめです。
-              テイクアウトもご用意できるので、ぜひご利用ください。</p>
-            <p class="p-shop__card-have-nice">Have a nice day !!</p>
+            <p class="p-shop__card-description-text">
+              当店から徒歩5分ほどの場所に、オープンテラスの場所があります。お天気がいい日は、木漏れ日の中で風を感じながら食べるのもおすすめです。<br />
+              テイクアウトもご用意できるので、ぜひご利用ください。
+            </p>
+            <div class="p-shop__card-have-nice">
+              <img src="./assets/img/Have a nice day.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
