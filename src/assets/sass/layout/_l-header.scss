@@ -8,7 +8,7 @@
   padding-bottom: 15px;
   background-color: global.$base-color;
 
-  @include global.mq("md"){
+  @include global.mq("md") {
     padding-bottom: 12px;
   }
 }
@@ -57,8 +57,13 @@
   }
 }
 
-.l-header__nav-list{
-  a{
-  padding-block: 20px;
+.l-header__nav-list {
+  &:hover {
+    text-decoration: underline global.$accent-color;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  a {
+    padding-block: 20px;
   }
 }

@@ -1,0 +1,108 @@
+@use "../global/" as global;
+
+.l-footer {
+  background: global.$main-color;
+  padding-top: 48px;
+  padding-bottom: 10px;
+  position: relative;
+
+  @include global.mq("md") {
+    padding-top: 56px;
+  }
+}
+
+.l-footer__pagetop {
+  position: absolute;
+  top: -35px;
+  right: 16px;
+
+  @include global.mq("md") {
+    top: -60px;
+    right: 60px;
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    @include global.mq("md") {
+      width: 120px;
+      height: 120px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.l-footer__inner {
+  text-align: center;
+}
+
+.l-footer__sns {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+}
+
+.l-footer__nav-lists {
+  padding-top: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+  color: #333;
+  font-family: global.$ff-deco;
+  letter-spacing: 0.48px;
+  @include global.mq("md") {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    gap: 40px;
+  }
+}
+
+.l-footer__nav-list {
+  &:hover {
+    text-decoration: underline global.$accent-color;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+
+.l-footer__logo {
+  padding-top: 34px;
+  padding-bottom: 24px;
+  @include global.mq("md") {
+    padding-top: 37px;
+    padding-bottom: 14px;
+  }
+}
+
+.fa-brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background-color: #2f2f2f;
+  border-radius: 50%;
+  font-size: 29px;
+  color: #fff;
+  border: 1px solid #2f2f2f;
+  transition: all 0.3s ease;
+  &:hover{
+    background-color:#fff ;
+    color: #2f2f2f;
+  }
+
+  @include global.mq("md") {
+    width: 40px;
+    height: 40px;
+    font-size: 23px;
+  }
+}
+
+.l-footer__copyright {
+  font-size: 12px;
+  letter-spacing: 0.36px;
+}

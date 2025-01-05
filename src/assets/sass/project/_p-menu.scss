@@ -235,7 +235,6 @@
 .p-menu__insta-link-text {
   margin-top: 24px;
   border: 1px solid #333;
-
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 22px;
@@ -243,6 +242,11 @@
   font-weight: 700;
   letter-spacing: 0.48px;
   position: relative;
+  transition: all 0.3s ease;
+  &:hover{
+    background:#333 ;
+    color: #fff;
+  }
   &::after {
     content: "\f08e";
     font-family: "Font Awesome 6 Free";

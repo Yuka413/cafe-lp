@@ -13,38 +13,44 @@
   }
 }
 
-.u-padding__menu{
-  @include global.mq("md"){
-  padding-right: 0px !important;
+.u-padding__menu {
+  @include global.mq("md") {
+    padding-right: 0px !important;
   }
 
-  @include global.mq("xl"){
+  @include global.mq("xl") {
     padding-right: 120px !important;
     padding-top: 31px;
   }
 }
 
-.u-color__white{
+.u-color__white {
   color: #fff;
 }
 
-.u-color__bg-white{
+.u-color__bg-white {
   background-color: #fff;
 }
 
-.u-title__sub--privacy{
+.u-title__sub--privacy {
   padding-top: 20px;
   font-size: 10px;
 
-  @include global.mq("md"){
+  @include global.mq("md") {
     font-size: 10px;
   }
 }
 
-.u-title__main--privacy{
+.u-title__main--privacy {
   font-size: 25px;
 
-  @include global.mq("md"){
+  @include global.mq("md") {
     font-size: 25px;
+  }
+}
+
+.u-title__main--contact {
+  @include global.mq("md") {
+    padding-bottom: 10px;
   }
 }

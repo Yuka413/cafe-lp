@@ -96,6 +96,17 @@ body {
 	font-weight: 400;
 }
 
+.fade-in-up {
+	opacity: 0;
+	transform: translateY(24px);
+	transition: opacity 1s, transform 1s;
+}
+
+.fade-in-up.is-in-view {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 .l-header {
 	background-color: #2f2f2f;
 	padding-bottom: 15px;
@@ -130,8 +141,93 @@ body {
 	letter-spacing: 0.42px;
 }
 
+.l-header__nav-list:hover {
+	-webkit-text-decoration: underline #159741;
+	text-decoration: underline #159741;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+}
+
 .l-header__nav-list a {
 	padding-block: 20px;
+}
+
+.l-footer {
+	background: #f2f2f2;
+	padding-bottom: 10px;
+	padding-top: 48px;
+	position: relative;
+}
+
+.l-footer__pagetop {
+	position: absolute;
+	right: 16px;
+	top: -35px;
+}
+
+.l-footer__pagetop img {
+	flex-shrink: 0;
+	height: 70px;
+	width: 70px;
+}
+
+.l-footer__inner {
+	text-align: center;
+}
+
+.l-footer__sns {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	justify-content: center;
+}
+
+.l-footer__nav-lists {
+	color: #333;
+	display: flex;
+	flex-direction: row;
+	font-family: "reross-quadratic", sans-serif;
+	gap: 32px;
+	justify-content: center;
+	letter-spacing: 0.48px;
+	padding-top: 38px;
+}
+
+.l-footer__nav-list:hover {
+	-webkit-text-decoration: underline #159741;
+	text-decoration: underline #159741;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+}
+
+.l-footer__logo {
+	padding-bottom: 24px;
+	padding-top: 34px;
+}
+
+.fa-brands {
+	align-items: center;
+	background-color: #2f2f2f;
+	border: 1px solid #2f2f2f;
+	border-radius: 50%;
+	color: #fff;
+	display: flex;
+	flex-shrink: 0;
+	font-size: 29px;
+	height: 50px;
+	justify-content: center;
+	transition: all 0.3s ease;
+	width: 50px;
+}
+
+.fa-brands:hover {
+	background-color: #fff;
+	color: #2f2f2f;
+}
+
+.l-footer__copyright {
+	font-size: 12px;
+	letter-spacing: 0.36px;
 }
 
 .c-about {
@@ -674,6 +770,12 @@ body {
 	padding-right: 22px;
 	padding-top: 15px;
 	position: relative;
+	transition: all 0.3s ease;
+}
+
+.p-menu__insta-link-text:hover {
+	background: #333;
+	color: #fff;
 }
 
 .p-menu__insta-link-text::after {
@@ -759,23 +861,15 @@ body {
 	padding-left: 14px;
 }
 
-.p-shop__info tr:nth-child(3) td:last-child {
-	line-height: 1.55;
-}
-
 .p-shop__description-image {
 	overflow: hidden;
-	padding-top: 40px;
+	padding-top: 32px;
 	text-align: center;
 }
 
 .p-shop__description-image img {
 	flex-shrink: 0;
 	height: 298px;
-}
-
-.p-shop__card {
-	padding-inline: 20px;
 }
 
 .p-shop__card-inner {
@@ -797,6 +891,10 @@ body {
 	position: absolute;
 	top: -56px;
 	width: 112px;
+}
+
+.p-shop__card-image {
+	text-align: center;
 }
 
 .p-shop__card-description {
@@ -832,15 +930,15 @@ body {
 
 .p-contact {
 	background: url(..//img/bg-vesitable.png) no-repeat center center/cover;
-	background-position: cover;
 	padding: 64px 16px;
 }
 
 .p-contact__inner {
 	background: #f2f2f2;
-	padding-block: 64px;
+	padding-bottom: 64px;
 	padding-left: 16px;
 	padding-right: 15px;
+	padding-top: 64px;
 }
 
 .p-contact__top-text {
@@ -849,31 +947,51 @@ body {
 	margin-inline: auto;
 	max-inline-size: -moz-max-content;
 	max-inline-size: max-content;
-	padding-top: 48px;
+	padding-top: 47px;
 }
 
 .p-contact__form {
-	padding-top: 32px;
+	padding-top: 30px;
 }
 
 .p-contact-control + .p-contact-control {
 	padding-top: 32px;
 }
 
+.p-contact-control__head {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.p-contact__form-label {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
 .p-contact-control__input {
 	margin-top: 6px;
 }
 
-.p-contact-control__input input,
-.p-contact-control__input textarea {
+.p-contact-control__input input {
 	padding-block: 13px;
-	padding-left: 16px;
+	padding-left: 15px;
 	padding-right: 13px;
 	width: 100%;
 }
 
+.p-contact-control__input textarea {
+	padding-block: 10px;
+	padding-left: 15px;
+	padding-right: 13px;
+	resize: vertical;
+	width: 100%;
+}
+
 .p-contact-control__input input {
-	height: 56px;
+	height: 55px;
 }
 
 .p-contact-control__input textarea {
@@ -911,7 +1029,6 @@ textarea:focus {
 	flex-shrink: 0;
 	font-size: 12px;
 	height: 21px;
-	margin-left: 10px;
 	padding: 1px 7px 3px 8px;
 	width: 39px;
 }
@@ -925,7 +1042,7 @@ textarea:focus {
 }
 
 .p-contact__checkbox-text {
-	padding-left: 30px;
+	padding-left: 31px;
 	position: relative;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -937,7 +1054,7 @@ textarea:focus {
 	content: "";
 	flex-shrink: 0;
 	height: 30px;
-	left: -5px;
+	left: -10px;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -983,7 +1100,7 @@ textarea:focus {
 }
 
 .p-contact__privacy-check {
-	left: -3px;
+	left: -8px;
 	opacity: 0;
 	position: absolute;
 	top: 50%;
@@ -997,7 +1114,13 @@ textarea:focus {
 	display: flex;
 	height: 56px;
 	justify-content: center;
+	margin-inline: 6px;
 	margin-top: 43px;
+	transition: opacity 0.3s ease;
+}
+
+.p-contact__submit:hover {
+	opacity: 0.7;
 }
 
 .p-contact__submit-button {
@@ -1162,6 +1285,38 @@ dialog ol li {
 .l-header__nav {
 	font-size: 18px;
 	gap: 41px;
+}
+
+.l-footer {
+	padding-top: 56px;
+}
+
+.l-footer__pagetop {
+	right: 60px;
+	top: -60px;
+}
+
+.l-footer__pagetop img {
+	flex-shrink: 0;
+	height: 120px;
+	width: 120px;
+}
+
+.l-footer__nav-lists {
+	font-size: 18px;
+	gap: 40px;
+	letter-spacing: 0.54px;
+}
+
+.l-footer__logo {
+	padding-bottom: 14px;
+	padding-top: 37px;
+}
+
+.fa-brands {
+	font-size: 23px;
+	height: 40px;
+	width: 40px;
 }
 
 .c-about {
@@ -1562,6 +1717,10 @@ dialog ol li {
 	padding-right: 10px;
 }
 
+.p-shop__info tr:nth-child(3) td:last-child {
+	line-height: 1.55;
+}
+
 .p-shop__info-access {
 	line-height: 1.2;
 }
@@ -1574,6 +1733,10 @@ dialog ol li {
 
 .p-shop__description-image {
 	padding-top: 0;
+}
+
+.p-shop__card {
+	padding-inline: 20px;
 }
 
 .p-shop__card-inner {
@@ -1615,13 +1778,59 @@ dialog ol li {
 	transform: scale(0.8);
 }
 
+.p-contact {
+	padding-block: 130px;
+}
+
+.p-contact__inner {
+	margin: 0 auto;
+	max-width: 800px;
+	padding-bottom: 71px;
+}
+
+.p-contact__top-text {
+	padding-top: 31px;
+}
+
+.p-contact__form {
+	padding-top: 48px;
+}
+
 .p-contact__form-items {
 	margin: 0 auto;
 	max-width: 520px;
 }
 
+.p-contact__form-label {
+	font-size: 18px;
+	gap: 16px;
+}
+
+.p-contact-control__input input {
+	height: 48px;
+}
+
 .p-contact-control__input {
 	text-align: center;
+}
+
+.p-contact__footer {
+	padding-top: 32px;
+}
+
+.p-contact__checkbox-text::after {
+	left: 8px;
+}
+
+.p-contact__checkbox-text {
+	font-size: 18px;
+	letter-spacing: 0.9px;
+	line-height: 1.5;
+	padding-left: 52px;
+}
+
+.p-contact__privacy-check {
+	left: 10px;
 }
 
 .p-contact__submit {
@@ -1647,6 +1856,10 @@ dialog ol li {
 
 .u-title__main--privacy {
 	font-size: 25px;
+}
+
+.u-title__main--contact {
+	padding-bottom: 10px;
 }
 
 }
