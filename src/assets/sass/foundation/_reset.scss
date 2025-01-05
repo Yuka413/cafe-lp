@@ -47,7 +47,10 @@ figcaption {
   display: block;
 }
 
-ol,
+ol {
+  list-style: decimal;
+}
+
 ul,
 li {
   list-style: none;
@@ -82,6 +85,6 @@ textarea {
   vertical-align: top;
 }
 
-q{
+q {
   quotes: '"' '"';
 }

@@ -31,3 +31,20 @@
 .u-color__bg-white{
   background-color: #fff;
 }
+
+.u-title__sub--privacy{
+  padding-top: 20px;
+  font-size: 10px;
+
+  @include global.mq("md"){
+    font-size: 10px;
+  }
+}
+
+.u-title__main--privacy{
+  font-size: 25px;
+
+  @include global.mq("md"){
+    font-size: 25px;
+  }
+}

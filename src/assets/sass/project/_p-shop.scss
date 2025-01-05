@@ -3,22 +3,60 @@
 .p-shop {
   background: #f2f2f2;
   padding-block: 64px;
+
+  @include global.mq("md") {
+    padding-block: 120px;
+  }
 }
 
 .p-shop__inner {
 }
 
 .p-shop__map-image {
-  padding-top: 56px;
+  text-align: center;
+  img {
+    padding-top: 56px;
+    @include global.mq("md") {
+      padding-top: 80px;
+    }
+  }
 }
 
 .p-shop__description {
   padding-inline: 16px;
+
+  @include global.mq("md") {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 0;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-left: 30px;
+  }
+
+  @include global.mq("xl") {
+    padding-left: 80px;
+  }
+  @include global.mq("ll") {
+    padding-left: 177px;
+  }
+}
+
+.p-shop__description-container {
+  padding-bottom: 7px;
 }
 
 .p-shop__name-container {
-  padding-top: 56px;
+  padding-top: 53px;
   text-align: center;
+
+  @include global.mq("md") {
+    text-align: left;
+    padding-top: 0;
+  }
 }
 
 .p-shop__name-head {
@@ -26,20 +64,35 @@
   font-family: global.$ff-deco;
   line-height: 1;
   font-size: 18px;
+  @include global.mq("md") {
+    padding-left: 3px;
+  }
 }
 
 .p-shop__name-body {
-  padding-left: 4px;
+  padding-left: 1px;
   color: global.$text-color-d;
   font-family: global.$ff-deco;
   font-size: 32px;
   line-height: 1;
   letter-spacing: 0.96px;
+  @include global.mq("md") {
+    line-height: 28px;
+    letter-spacing: 0.96px;
+  }
 }
 
 .p-shop__name-jp {
   color: global.$text-color-d;
+  padding-top: 2px;
   letter-spacing: 0.48px;
+  @include global.mq("xl") {
+    display: inline;
+    letter-spacing: 0.54px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-feature-settings: "palt";
+  }
 }
 
 .p-shop__address {
@@ -47,16 +100,27 @@
   color: global.$text-color-d;
   line-height: 1.7;
   letter-spacing: 0.48px;
+  padding-top: 24px;
+
+  @include global.mq("md") {
+    padding-left: 3px;
+    padding-top: 26px;
+  }
 }
 
 .p-shop__address-content {
+  @include global.mq("lg") {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.54px;
+  }
 }
 
 .p-shop__info {
-  padding-top: 5px;
-  padding-inline: 12px;
+  padding-top: 2px;
+  padding-inline: 10px;
   color: global.$text-color-d;
-  line-height: 1.7;
+  line-height: 1.6;
   letter-spacing: 0.48px;
 
   th {
@@ -65,23 +129,76 @@
   }
 
   td {
-    padding-left: 10px;
+    padding-left: 14px;
+    @include global.mq("md") {
+      padding-left: 17px;
+    }
+  }
+
+  @include global.mq("md") {
+    padding-right: 10px;
+    padding-left: 0;
+  }
+
+  @include global.mq("lg") {
+    padding-left: 0;
+    padding-top: 17px;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    line-height: 1.9;
   }
 }
 
+.p-shop__info {
+  tr:nth-child(3) td:last-child {
+    line-height: 1.55;
+  }
+}
+
+.p-shop__info-access {
+  @include global.mq("md") {
+    line-height: 1.2;
+  }
+}
 .p-shop__description-image {
   padding-top: 40px;
+  text-align: center;
+  overflow: hidden;
+  img {
+    height: 298px;
+    flex-shrink: 0;
+    @include global.mq("md") {
+      height: auto;
+      max-width: 700px;
+      width: calc(700px / 1440px * 100vw);
+    }
+  }
+
+  @include global.mq("md") {
+    padding-top: 0;
+  }
 }
 
 .p-shop__card {
-  margin-inline: 16px;
-  padding: 10px;
-  margin-top: 98px;
-  background: #fff;
-  box-shadow: 0px 4px 20px 0px rgba(161, 159, 159, 0.6);
+  padding-inline: 20px;
+
 }
 
 .p-shop__card-inner {
+  margin-inline: 16px;
+  padding: 18px 10px 7px;
+  margin-top: 98px;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(161, 159, 159, 0.6);
+
+  @include global.mq("md") {
+    max-width: 1146px;
+    margin: 80px auto 0;
+    padding: 30px 32px 41px 34px;
+  }
+}
+
+.p-shop__card-container{
   position: relative;
 }
 
@@ -91,12 +208,29 @@
     width: 112px;
     height: 93px;
     flex-shrink: 0;
-    top: -39px;
-    left: -25px;
+    top: -56px;
+    left: -26px;
+
+    @include global.mq("md"){
+      width: 200px;
+      height: 170px;
+      left: -55px;
+    }
+
+    @include global.mq("ll") {
+      width: 288px;
+      height: 240px;
+      flex-shrink: 0;
+      left: -131px;
+      top: -103px;
+    }
   }
 }
 
 .p-shop__card-image {
+  @include global.mq("md") {
+    display: flex;
+  }
 }
 
 .p-shop__card-image--first {
@@ -108,6 +242,10 @@
 .p-shop__card-description {
   position: relative;
   padding-bottom: 107px;
+  @include global.mq("md") {
+    padding-bottom: 0;
+    padding-left: 9px;
+  }
 }
 
 .p-shop__card-dear {
@@ -116,16 +254,30 @@
   font-family: global.$ff-deco-secondary;
   font-size: 30px;
   letter-spacing: 1.5px;
-  left: 12px;
-  top: -45px;
+  left: 14px;
+  top: -43px;
+
+  @include global.mq("md") {
+    font-size: 35px;
+    left: -8px;
+    letter-spacing: 2.4px;
+    top: -35px;
+  }
+  @include global.mq("xl") {
+    font-size: 40px;
+    top: -19px;
+    left: -5px;
+  }
+  @include global.mq("ll") {
+    font-size: 48px;
+    left: 9px;
+  }
 }
 
 .p-shop__card-description-text {
-  margin-top: 63px;
+  margin-top: 64px;
   color: #4f4f4f;
   line-height: 2.5;
-  // text-decoration: underline #c4c4c4;
-  // text-underline-offset: 13px;
   background-image: linear-gradient(
     180deg,
     transparent 0%,
@@ -134,13 +286,29 @@
   );
   background-repeat: repeat-y;
   background-size: 100% 2.5em;
-  padding-left: 12px;
+  padding-left: 14px;
+
+  @include global.mq("md") {
+    max-width: 596px;
+    margin: 45px auto 0;
+  }
 }
 
 .p-shop__card-have-nice {
   img {
     position: absolute;
-    bottom: 42px;
-    right: -25px;
+    bottom: 27px;
+    right: -22px;
+
+    @include global.mq("md") {
+      bottom: -43px;
+      right: -72px;
+      transform: scale(0.8);
+    }
+    @include global.mq("lg") {
+      bottom: -33px;
+      right: -7px;
+      transform: scale(1.11);
+    }
   }
 }

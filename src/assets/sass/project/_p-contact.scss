@@ -1,0 +1,191 @@
+@use "../global/" as global;
+
+.p-contact {
+  background: url(..//img/bg-vesitable.png) no-repeat center center / cover;
+  background-position: cover;
+  padding: 64px 16px;
+}
+
+.p-contact__inner {
+  background: global.$main-color;
+  padding-block: 64px;
+  padding-right: 15px;
+  padding-left: 16px;
+}
+
+.p-contact__top-text {
+  color: global.$text-color-d;
+  letter-spacing: 0.48px;
+  padding-top: 48px;
+  margin-inline: auto;
+  max-inline-size: max-content;
+}
+
+.p-contact__form {
+  padding-top: 32px;
+}
+
+.p-contact__form-items {
+  @include global.mq("md") {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+.p-contact-control {
+}
+
+.p-contact-control + .p-contact-control {
+  padding-top: 32px;
+}
+
+.p-contact-control__head {
+}
+
+.p-contact-control__input {
+  input,
+  textarea {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 13px;
+    padding-block: 13px;
+
+    &:hover {
+    }
+  }
+  input {
+    height: 56px;
+  }
+  textarea {
+    height: 160px;
+  }
+  ::placeholder {
+    color: #bdbdbd;
+  }
+  margin-top: 6px;
+  @include global.mq("md") {
+    text-align: center;
+  }
+}
+
+input,
+textarea {
+  border: 1px solid #4f4f4f;
+  background: #fff;
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid global.$accent-color;
+    box-shadow: 0px 0px 4px 0px global.$accent-color;
+  }
+}
+
+.p-contact-control__head-required {
+  color: #fff;
+  font-size: 12px;
+  margin-left: 10px;
+  width: 39px;
+  height: 21px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #159741;
+  padding: 1px 7px 3px 8px;
+}
+
+.p-contact__privacy {
+  text-align: center;
+}
+
+.p-contact__footer {
+  padding-top: 35px;
+}
+
+.p-contact__checkbox-text {
+  width: fit-content;
+  padding-left: 30px;
+  position: relative;
+  &::after {
+    transition: all 0.3s ease;
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border: 1px solid #2f2f2f;
+    background: #fff;
+  }
+  &:hover::after {
+    border: 1px solid #159741;
+    box-shadow: 0px 0px 4px 0px #159741;
+  }
+}
+
+.p-contact__form-checkbox {
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.p-contact__checkbox-text {
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+}
+
+.p-contact__form-checkbox {
+  &:checked ~ .p-contact__checkbox-text .p-contact__privacy-check {
+    opacity: 1;
+  }
+
+  &:checked ~ .p-contact__checkbox-text {
+    &::after {
+      border: 1px solid #159741;
+      box-shadow: 0px 0px 4px 0px #159741;
+      background: rgba(21, 151, 65, 0.15);
+    }
+  }
+}
+
+.p-contact__checkbox-text--privacy {
+  color: global.$accent-color;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  text-decoration: underline global.$accent-color;
+  text-underline-offset: 2px;
+  position: relative;
+}
+
+.p-contact__privacy-check {
+  opacity: 0;
+  position: absolute;
+  left: -3px;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.p-contact__submit {
+  margin-top: 43px;
+  background-color: global.$accent-color;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include global.mq("md") {
+    max-width: 239px;
+    margin: 43px auto 0;
+  }
+}
+
+.p-contact__submit-button {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.9px;
+}

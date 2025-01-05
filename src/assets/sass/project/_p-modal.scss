@@ -1,0 +1,100 @@
+@use "../global/" as global;
+dialog {
+  padding: 0;
+
+  ol li {
+    list-style: decimal;
+    margin-inline: 20px;
+  }
+}
+
+.p-modal {
+  z-index: 100;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  border: none;
+  max-width: calc(100% - 34px);
+  height: calc(100vh - 200px);
+  overflow: auto;
+  background: #fff;
+
+  @include global.mq("ll") {
+    max-width: 1140px;
+  }
+
+  &::backdrop {
+    opacity: 0.5;
+    background: #000;
+  }
+}
+
+.p-modal__head {
+  position: relative;
+  position: fixed;
+  background: #fff;
+  min-width: calc(100% - 34px);
+  padding-bottom: 20px;
+
+  @include global.mq("ll") {
+    min-width: 1140px;
+  }
+}
+
+.p-modal__close-icon {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 101;
+}
+
+.js-modal-close {
+}
+
+.p-modal__close-icon-bar {
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  z-index: 101;
+  left: 0;
+  background-color: #333;
+
+  &:nth-of-type(1) {
+    transform: rotate(45deg);
+  }
+
+  &:nth-of-type(2) {
+    transform: rotate(-45deg);
+  }
+}
+
+.p-modal__body {
+  overflow: scroll;
+  padding: 20px;
+  padding-top: 120px;
+  font-size: 14px;
+}
+
+.p-modal__body-top {
+}
+
+.p-modal__body-title {
+  padding-top: 15px;
+  font-weight: 700;
+}
+
+.p-modal__body-content {
+}
+
+.js-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.p-modal__body-end{
+    display: flex;
+    justify-content: end;
+}

@@ -41,3 +41,31 @@
 
 
 }
+
+.c-bg-parallax__secondary{
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  @include global.mq("md") {
+    height: 450px;
+  }
+
+  img {
+    object-fit: cover;
+    transform-origin: center;
+    object-position: -2px 2px;
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @media screen and (min-width: 645px) {
+        object-position: -9px -45px;
+
+    }
+    @include global.mq("ll") {
+      object-position: -7px -229px;
+      transform: scale(1.03);
+    }
+  }
+}
