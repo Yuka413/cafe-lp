@@ -7,13 +7,29 @@ body {
   color: global.$text-color-d;
 }
 
-.fade-in-up{
+.fade-in-up {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 1s, transform 1s;
 
-  &.is-in-view{
+  &.is-in-view {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.slide-left {
+  transform: translateX(calc(-50vw - 50%));
+}
+
+.slide-right {
+  transform: translateX(calc(50vw + 50%));
+}
+
+.slide-in {
+  transition: 1s ;
+}
+
+.show {
+  transform: translateX(0);
 }

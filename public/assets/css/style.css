@@ -107,6 +107,22 @@ body {
 	transform: translateY(0);
 }
 
+.slide-left {
+	transform: translateX(calc(-50vw - 50%));
+}
+
+.slide-right {
+	transform: translateX(calc(50vw + 50%));
+}
+
+.slide-in {
+	transition: 1s;
+}
+
+.show {
+	transform: translateX(0);
+}
+
 .l-header {
 	background-color: #2f2f2f;
 	padding-bottom: 15px;
@@ -1097,6 +1113,11 @@ textarea:focus {
 	position: relative;
 	text-decoration: underline #159741;
 	text-underline-offset: 2px;
+	transition: opacity 0.3s ease;
+}
+
+.p-contact__checkbox-text--privacy:hover {
+	opacity: 0.7;
 }
 
 .p-contact__privacy-check {
