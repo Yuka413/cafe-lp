@@ -40,6 +40,7 @@
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
+  <body>
 
   <!-- headerここから -->
   <header class="l-header">
@@ -62,9 +63,15 @@
   <!-- mvここから -->
   <div class="p-mv">
     <div class="p-mv__inner">
-      <picture class="p-mv__image">
-        <source media="(min-width:750px)" srcset="./assets/img/img_mv-pc.png" />
-        <img src="./assets/img/img_mv.png" alt="メインビジュアル" />
+      <div class="p-mv__image">
+        <picture>
+          <source
+            media="(min-width:750px)"
+            srcset="./assets/img/img_mv-pc.png"
+          />
+          <img src="./assets/img/img_mv.png" alt="メインビジュアル" />
+        </picture>
+
         <div class="p-mv__description">
           <p class="p-mv__text-main">Let's eat</p>
           <p class="p-mv__text-main">delicious</p>
@@ -74,7 +81,7 @@
         </div>
         <p class="p-mv__text-sub">健康のためじゃない、</p>
         <p class="p-mv__text-sub__secondary">「おいしいから食べたい」 サラダ</p>
-      </picture>
+      </div>
     </div>
   </div>
   <!-- mvここまで -->
@@ -115,22 +122,22 @@
   <!-- aboutここから -->
   <section class="p-about">
     <div class="p-about__inner">
-      <h2 class="c-title fade-in-up">
+      <div class="c-title fade-in-up">
         <p class="c-title__sub">Garden Saladのこだわり</p>
-        <p id="about" class="c-title__main">About</p>
+        <h2 id="about" class="c-title__main">About</h2>
         <span class="c-title__border"></span>
-      </h2>
+      </div>
       <div class="p-about__content">
         <div class="c-about">
           <div class="c-about__text">
-            <h2 class="c-about__title">
+            <h3 class="c-about__title">
               全ての食材が安心の<span class="c-about__title--color">国産</span>
-            </h2>
+            </h3>
             <p class="c-about__description">
               TF Garden
               Saladaの食材は全て産地の公表をしています。信頼できる農家さんから直接買い取り、その日採れたものをその日のうちに厨房へ。
             </p>
-            <span class="c-about__number ">01</span>
+            <span class="c-about__number">01</span>
           </div>
           <div class="c-about__image slide-in slide-left">
             <img src="./assets/img/about-1.png" alt="" />
@@ -138,12 +145,12 @@
         </div>
         <div class="c-about c-about__reverse">
           <div class="c-about__text c-about__text--reverse">
-            <h2 class="c-about__title ">
+            <h3 class="c-about__title">
               カスタム可能で<br />その組み合わせは<span
                 class="c-about__title--color"
                 >全400種類</span
               >！
-            </h2>
+            </h3>
             <p class="c-about__description">
               定番のメニューに加えてサラダのフルカスタムも可能。お好みのベース×トッピング×ドレッシングを選んであなた好みにアレンジして。
             </p>
@@ -155,11 +162,11 @@
         </div>
         <div class="c-about">
           <div class="c-about__text u-padding__menu">
-            <h2 class="c-about__title">
+            <h3 class="c-about__title">
               <span class="c-about__title--color">ジムトレーナー監修</span>の<br
                 class="u-pc-hidden"
               />メニュー
-            </h2>
+            </h3>
             <p class="c-about__description">
               コンビニのサラダチキンに飽きたらこれ！一食でタンパク質20gがとれるトレーニング向けのメニューもご用意してます。
             </p>
@@ -181,11 +188,11 @@
   <!-- menuここから -->
   <section class="p-menu">
     <div class="p-menu__inner">
-      <h2 class="c-title fade-in-up">
+      <div class="c-title fade-in-up">
         <p class="c-title__sub u-color__white">メニュー</p>
-        <p id="menu" class="c-title__main u-color__white">Menu</p>
+        <h2 id="menu" class="c-title__main u-color__white">Menu</h2>
         <span class="c-title__border u-color__bg-white"></span>
-      </h2>
+      </div>
       <div class="p-menu__nutrition">
         <div class="p-menu__nutrition-pfc">P : タンパク質</div>
         <div class="p-menu__nutrition-pfc">F : 脂質</div>
@@ -314,11 +321,11 @@
   <!-- shopここから -->
   <section class="p-shop">
     <div class="p-shop__inner">
-      <h2 class="c-title fade-in-up">
+      <div class="c-title fade-in-up">
         <p class="c-title__sub">店舗情報</p>
-        <p id="shop" class="c-title__main">Shop</p>
+        <h2 id="shop" class="c-title__main">Shop</h2>
         <span class="c-title__border"></span>
-      </h2>
+      </div>
       <div class="p-shop__map-image">
         <picture>
           <source
@@ -330,11 +337,11 @@
       </div>
       <div class="p-shop__description">
         <div class="p-shop__description-container">
-          <h3 class="p-shop__name-container">
-            <span class="p-shop__name-head">TF</span>
-            <span class="p-shop__name-body">Garden Salad</span>
+          <div class="p-shop__name-container">
+            <p class="p-shop__name-head">TF</p>
+            <h3 class="p-shop__name-body">Garden Salad</h3>
             <p class="p-shop__name-jp">（ ガーデンサラダ ）</p>
-          </h3>
+          </div>
 
           <div class="p-shop__address">
             <p class="p-shop__address-content">〒150 - 0000</p>
@@ -409,13 +416,15 @@
               </picture>
             </div>
             <div class="p-shop__card-description">
-              <p id="js-typing" class="p-shop__card-dear" data-speed="100">Dear You.</p>
+              <p id="js-typing" class="p-shop__card-dear" data-speed="100">
+                Dear You.
+              </p>
               <p class="p-shop__card-description-text">
                 当店から徒歩5分ほどの場所に、オープンテラスの場所があります。お天気がいい日は、木漏れ日の中で風を感じながら食べるのもおすすめです。<br />
                 テイクアウトもご用意できるので、ぜひご利用ください。
               </p>
               <div class="p-shop__card-have-nice">
-                <img src="./assets/img/Have a nice day.png" alt="" />
+                <img src="./assets/img/Have-a-nice-day.png" alt="" />
               </div>
             </div>
           </div>
@@ -428,22 +437,21 @@
   <!-- contactここから -->
   <section class="p-contact">
     <div class="p-contact__inner">
-      <h2 class="c-title fade-in-up">
+      <div class="c-title fade-in-up">
         <p class="c-title__sub">お問い合わせ</p>
-        <p id="contact" class="c-title__main u-title__main--contact">Contact</p>
+        <h2 id="contact" class="c-title__main u-title__main--contact">Contact</h2>
         <span class="c-title__border"></span>
-      </h2>
+      </div>
       <p class="p-contact__top-text">
         ご質問などは、下記のフォームよりお問い合わせください。
       </p>
-      <form action="" class="p-contact__form">
+      <form class="p-contact__form">
         <div class="p-contact__form-items">
           <div class="p-contact__form-item p-contact-control">
             <div class="p-contact-control__head">
               <label for="your-name" class="p-contact__form-label"
                 >お名前<span class="p-contact-control__head-required"
-                  >必須</span
-                ></label
+                  >必須</span></label
               >
             </div>
             <div class="p-contact-control__input">
@@ -767,11 +775,10 @@
       <div class="l-footer__logo">
         <a href="#"><img src="./assets/img/logo_footer.png" alt="" /></a>
       </div>
-      <small class="l-footer__copyright">&copy TF Garden Salad.</small>
+      <small class="l-footer__copyright">&copy; TF Garden Salad.</small>
     </div>
   </div>
   <!-- footerここまで -->
-  <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>

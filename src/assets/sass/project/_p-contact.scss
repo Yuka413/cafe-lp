@@ -35,7 +35,7 @@
 }
 
 .p-contact__form {
-  padding-top: 30px;
+  padding-top: 29px;
   @include global.mq("md") {
     padding-top: 48px;
   }
@@ -78,7 +78,8 @@
     width: 100%;
     padding-left: 15px;
     padding-right: 13px;
-    padding-block: 13px;
+    padding-top: 14px;
+    padding-bottom: 15px;
   }
   textarea {
     width: 100%;
@@ -87,12 +88,7 @@
     padding-block: 10px;
     resize: vertical;
   }
-  input {
-    height: 55px;
-    @include global.mq("md") {
-      height: 48px;
-    }
-  }
+
   textarea {
     height: 160px;
   }
@@ -120,12 +116,10 @@ textarea {
 .p-contact-control__head-required {
   color: #fff;
   font-size: 12px;
-  width: 39px;
-  height: 21px;
-  flex-shrink: 0;
   border-radius: 6px;
   background: #159741;
-  padding: 1px 7px 3px 8px;
+  padding: 5px 7px 5px 8px;
+  line-height: 12px;
 }
 
 .p-contact__privacy {

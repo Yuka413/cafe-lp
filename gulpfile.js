@@ -11,6 +11,7 @@ function compileSass() {
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([autoprefixer(), cssSorter()]))
     .pipe(mmq())
+
     .pipe(gulp.dest("./public/assets/css/"));
 }
 

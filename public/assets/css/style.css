@@ -544,9 +544,9 @@ body {
 }
 
 .p-mv__description {
-	bottom: -18px;
 	left: -48px;
 	position: absolute;
+	top: 26px;
 	-moz-text-align-last: left;
 	text-align-last: left;
 }
@@ -563,6 +563,7 @@ body {
 }
 
 .p-mv__text-sub {
+	bottom: 63px;
 	color: #fff;
 	font-size: 14px;
 	font-weight: 500;
@@ -570,11 +571,11 @@ body {
 	letter-spacing: 0.7px;
 	padding-top: 15px;
 	position: absolute;
-	top: 38px;
 }
 
 .p-mv__text-sub__secondary {
 	background-color: #159741;
+	bottom: 24px;
 	color: #fff;
 	font-feature-settings: "palt";
 	font-size: 14px;
@@ -586,7 +587,6 @@ body {
 	padding-right: 8px;
 	padding-top: 4px;
 	position: absolute;
-	top: 82px;
 }
 
 .p-concept {
@@ -651,6 +651,7 @@ body {
 
 .p-about {
 	background-color: #f2f2f2;
+	overflow: hidden;
 }
 
 .p-about__inner {
@@ -832,6 +833,7 @@ body {
 
 .p-shop__name-head {
 	color: #333;
+	display: inline;
 	font-family: "reross-quadratic", sans-serif;
 	font-size: 18px;
 	line-height: 1;
@@ -839,6 +841,7 @@ body {
 
 .p-shop__name-body {
 	color: #333;
+	display: inline;
 	font-family: "reross-quadratic", sans-serif;
 	font-size: 32px;
 	letter-spacing: 0.96px;
@@ -967,7 +970,7 @@ body {
 }
 
 .p-contact__form {
-	padding-top: 30px;
+	padding-top: 29px;
 }
 
 .p-contact-control + .p-contact-control {
@@ -992,9 +995,10 @@ body {
 }
 
 .p-contact-control__input input {
-	padding-block: 13px;
+	padding-bottom: 15px;
 	padding-left: 15px;
 	padding-right: 13px;
+	padding-top: 14px;
 	width: 100%;
 }
 
@@ -1004,10 +1008,6 @@ body {
 	padding-right: 13px;
 	resize: vertical;
 	width: 100%;
-}
-
-.p-contact-control__input input {
-	height: 55px;
 }
 
 .p-contact-control__input textarea {
@@ -1042,11 +1042,9 @@ textarea:focus {
 	background: #159741;
 	border-radius: 6px;
 	color: #fff;
-	flex-shrink: 0;
 	font-size: 12px;
-	height: 21px;
-	padding: 1px 7px 3px 8px;
-	width: 39px;
+	line-height: 12px;
+	padding: 5px 7px 5px 8px;
 }
 
 .p-contact__privacy {
@@ -1265,6 +1263,25 @@ dialog ol li {
 .c-bg-parallax img {
 	-o-object-position: -9px -110px;
 	object-position: -9px -110px;
+}
+
+}
+
+@media screen and (min-width: 550px) {
+
+.p-mv__text-main {
+	font-size: 60px;
+	line-height: 60px;
+}
+
+.p-mv__text-sub {
+	bottom: 85px;
+	font-size: 18px;
+}
+
+.p-mv__text-sub__secondary {
+	bottom: 35px;
+	font-size: 18px;
 }
 
 }
@@ -1506,28 +1523,23 @@ dialog ol li {
 	padding-top: 90px;
 }
 
-.p-mv__description {
-	bottom: -35px;
-	left: -40px;
-}
-
 .p-mv__text-main {
 	font-size: 70px;
 	line-height: 70px;
 }
 
 .p-mv__text-sub {
+	bottom: 85px;
 	font-size: 22px;
 	left: -35px;
 	letter-spacing: 1.6px;
-	top: 80px;
 }
 
 .p-mv__text-sub__secondary {
+	bottom: 35px;
 	font-size: 22px;
 	left: -40px;
 	letter-spacing: 3.9px;
-	top: 145px;
 }
 
 .p-concept {
@@ -1827,10 +1839,6 @@ dialog ol li {
 	gap: 16px;
 }
 
-.p-contact-control__input input {
-	height: 48px;
-}
-
 .p-contact-control__input {
 	text-align: center;
 }
@@ -2067,8 +2075,8 @@ dialog ol li {
 }
 
 .p-mv__description {
-	bottom: -51px;
-	left: -181px;
+	left: 111px;
+	top: 84px;
 }
 
 .p-mv__text-main {
@@ -2077,21 +2085,21 @@ dialog ol li {
 }
 
 .p-mv__text-sub {
+	bottom: 169px;
 	font-size: 32px;
-	left: -161px;
+	left: 132px;
 	letter-spacing: 1.6px;
-	top: 108px;
 }
 
 .p-mv__text-sub__secondary {
+	bottom: 84px;
 	font-size: 32px;
-	left: -179px;
+	left: 114px;
 	letter-spacing: 3.9px;
 	padding-bottom: 9px;
 	padding-left: 13px;
 	padding-right: 21px;
 	padding-top: 9px;
-	top: 190px;
 }
 
 .p-menu__insta-inner {

@@ -60,6 +60,7 @@
 }
 
 .p-shop__name-head {
+  display: inline;
   color: global.$text-color-d;
   font-family: global.$ff-deco;
   line-height: 1;
@@ -70,6 +71,7 @@
 }
 
 .p-shop__name-body {
+  display: inline;
   padding-left: 1px;
   color: global.$text-color-d;
   font-family: global.$ff-deco;
