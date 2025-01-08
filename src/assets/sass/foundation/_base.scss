@@ -33,3 +33,9 @@ body {
 .show {
   transform: translateX(0);
 }
+
+.js-typing {
+  span {
+    display: none;
+  }
+}

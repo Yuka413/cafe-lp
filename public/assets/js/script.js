@@ -31,12 +31,15 @@ jQuery('a[href^="#"]').on("click", function (e) {
 });
 
 //   ふわっと表示
-const intersectionObserver = new IntersectionObserver(function (entries, observer) {
+const intersectionObserver = new IntersectionObserver(function (
+  entries,
+  observer
+) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
       entry.target.classList.add("is-in-view");
       observer.unobserve(entry.target);
-    } 
+    }
   });
 });
 
@@ -45,53 +48,59 @@ inViewItems.forEach(function (inViewItem) {
   intersectionObserver.observe(inViewItem);
 });
 
-
-let winHeight,winScroll,scrollPos;
-$(window).on('load scroll',function(){
-	winScroll = $(window).scrollTop();
-	winHeight = $(window).height();
-	scrollPos = winHeight * 0.9 + winScroll;
-	$(".slide-in").each(function(){
-		if($(this).offset().top <= scrollPos){
-			$(this).addClass("show");
-		}
-	});
+let winHeight, winScroll, scrollPos;
+$(window).on("load scroll", function () {
+  winScroll = $(window).scrollTop();
+  winHeight = $(window).height();
+  scrollPos = winHeight * 0.9 + winScroll;
+  $(".slide-in").each(function () {
+    if ($(this).offset().top <= scrollPos) {
+      $(this).addClass("show");
+    }
+  });
 });
 
-
 // 一文字ずつ表示
-const typeTarget = document.querySelectorAll('#js-typing');
-
-let options = {
-    rootMargin: '0px',
-    threshold: .5
-}
-
-let callback = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.intersectionRatio > .5 && entry.target.classList.contains('active') == false) {
-            let typeContent = entry.target.textContent;
-            let typeSprit = typeContent.split('');
-            let typeSpeed = entry.target.getAttribute('data-speed');
-            entry.target.textContent = '';
-            entry.target.classList.add('active');
-
-            let typeLength = 0;
-            let typeInterval = setInterval(() => {
-                if (typeSprit[typeLength] == undefined) {
-                    clearInterval(typeInterval);
-                    return false;
-                }
-                entry.target.textContent += typeSprit[typeLength];
-                typeLength++;
-            }, typeSpeed);
-
-        }
+$(document).ready(function () {
+  // 初期化: テキストを分割して <span> にラップ
+  $(".js-typing").each(function () {
+    let text = $(this).text().trim(); // 元のテキストを取得して余計な空白を除去
+    let html = "";
+    text.split("").forEach(function (char) {
+      // 空白文字はそのまま扱う
+      html += `<span>${char === " " ? "&nbsp;" : char}</span>`;
     });
+    $(this).html(html); // 元のテキストを置き換え
+  });
+
+  // タイピングアニメーション関数
+ // タイピングアニメーション関数
+ function TextTypingAnime() {
+  $(".js-typing").each(function () {
+    var elemPos = $(this).offset().top - 50;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var $this = $(this);
+
+    // 1回だけ発火する条件: 画面内に入り、かつ active クラスが付いていない場合
+    if (scroll >= elemPos - windowHeight && !$this.hasClass("active")) {
+      $this.addClass("active"); // フラグとして active クラスを付与
+      let thisChild = $this.children(); // spanタグを取得
+      thisChild.each(function (i) {
+        var time = 130; // アニメーション速度
+        $(this)
+          .delay(time * i)
+          .fadeIn(time);
+      });
+    }
+  });
 }
 
-let observer = new IntersectionObserver(callback, options);
+  // スクロールイベントでアニメーションを実行
+  $(window).on("scroll", function () {
+    TextTypingAnime();
+  });
 
-typeTarget.forEach(e => {
-    observer.observe(e);
+  // 初期状態でアニメーションを実行
+  TextTypingAnime();
 });
